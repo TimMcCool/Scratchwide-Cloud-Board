@@ -11,7 +11,7 @@ def get_user_list(projectid):
         logs = scratch3.get_cloud_logs(projectid)
         users = []
         for i in logs:
-            if i["user"] not in users:
+            if i["user"] =! users:
                 if not int(i['timestamp']) < round((time.time() - 10) * 1000):
                     users.append(i["user"])
     except Exception as e:
@@ -48,7 +48,7 @@ def project(projectid):
         players = ["Invalid project id!"]
         name = "None"
     if len(players) == 0:
-        players = ["Noone is playing this game right now!"]
+        players = ["No one is playing this game right now!"]
     return [name] + players
     
 @client.event
